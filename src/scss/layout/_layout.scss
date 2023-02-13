@@ -6,15 +6,18 @@ nav {
 
 header {
   height: $huge;
+  width: $huge;
   background-image: url('../../images/header.jpg');
   background-size: cover;
   text-align: center;
 }
 
 .card {
+  background-color: $secondary-color;
   border-radius: 5px;
+  border: $border-size solid $secondary-color;
 
-  .img {
+  .img {    
     background-size: cover;
     height: $large;
     width: 100%;
@@ -24,12 +27,13 @@ header {
 
 main {
   aside {
+    border: $border-size solid $secondary-color;
   }
 }
 
 footer {
   background-color: $primary-color;
   a {
-    color: white;
+    color: $tertiary-color;
   }
 }
