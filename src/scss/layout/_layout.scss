@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 nav {
   a {
     color: $primary-color;
@@ -6,18 +8,17 @@ nav {
 
 header {
   height: $huge;
-  width: $huge;
   background-image: url('../../images/header.jpg');
   background-size: cover;
   text-align: center;
 }
 
 .card {
-  background-color: $secondary-color;
+  background-color: $border-color;
+  border: $border-size solid $border-color;
   border-radius: 5px;
-  border: $border-size solid $secondary-color;
 
-  .img {    
+  .img {
     background-size: cover;
     height: $large;
     width: 100%;
@@ -27,13 +28,97 @@ header {
 
 main {
   aside {
-    border: $border-size solid $secondary-color;
+    border: $border-size solid $border-color;
   }
 }
 
 footer {
   background-color: $primary-color;
   a {
-    color: $tertiary-color;
+    color: white;
   }
 }
+
+/* @media screen and (min-width: $tablet) {
+  .card {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0.5rem;
+    &-text {
+      padding: 0 $tiny $tiny $tiny;
+    }
+  }
+
+  nav {
+    ul {
+      justify-content: flex-end;
+    }
+  }
+
+  main {
+    flex-flow: row;
+    aside {
+      width: 25%;
+    }
+    article {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .card {
+    flex-basis: 1;
+    .img {
+      width: 44%;
+    }
+  }
+} */
+/* ------------------------------------------- */
+// @media screen and (min-width: $tablet) {
+//   .card {
+//     flex-flow: row nowrap;
+//     align-items: flex-start;
+//     width: 80%;
+//     margin: 0.5rem;
+//     &-text {
+//       padding: 0 $tiny $tiny $tiny;
+//     }
+//   }
+
+//   nav {
+//     ul {
+//       justify-content: flex-end;
+//     }
+//   }
+
+//   main {
+//     flex-flow: row;
+//     aside {
+//       width: 25%;
+//     }
+//     article {
+//       width: 50%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .cards {
+//     flex-direction: row;
+//     justify-content: center;
+//     text-align: center;
+//   }
+//   .card {
+//     flex-basis: 1;
+//     .img {
+//       width: 44%;
+//     }
+//   }
+// }
